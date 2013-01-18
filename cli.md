@@ -1,4 +1,4 @@
-=== Getting SSH Access to login.kbase.us ===
+### Getting SSH Access to login.kbase.us ###
 
 1. On your local machine generate an SSH key pair and upload it to KBase:
 Use the default location and be sure to give a passphrase:
@@ -29,14 +29,14 @@ scp ~/.ssh/id_rsa.pub devoid@login.kbase.us:~/.ssh/id_rsa.pub
 scp ~/.ssh/id_rsa devoid@login.kbase.us:~/.ssh/id_rsa
 ```
 
-=== Logging into login.kbase.us ===
+### Logging into login.kbase.us ###
 
 ```
 ssh devoid@login.kbase.us
 ```
 
 
-=== Configuring your environment to work with Magellan ===
+### Configuring your environment to work with Magellan ###
 
 1. Look into the .essexrc file in your home directory:
 ```
@@ -61,7 +61,7 @@ $ nova list
 ```
 
 
-=== Working with Magellan, Adding an SSH public key ===
+### Working with Magellan, Adding an SSH public key ###
 ```
 $ nova keypair-list
 $ nova keypair-add --pub-key ~/.ssh/id_rsa.pub my_public_key
@@ -78,7 +78,7 @@ $ nova keypair-list
 To start up a compute instance you must select an image, a virtual machine flavor and assign
 the machine the appropriate security group(s).
 
-=== Pick an Image ===
+### Pick an Image ###
 
 An image is like a bootable operating system CD and there are several we can choose from:
 
@@ -106,7 +106,7 @@ We're going to use the "Ubuntu Precise 12.04 (Preferred Image)" one, so copy the
 `b24d27d8-146c-4eea-9153-378d2642959d`
 
 
-=== Pick a VM Flavor ===
+### Pick a VM Flavor ###
 
 We need to pick the type of machine we would like to start this image on. Each machine type is a `flavor`:
 ```
@@ -134,7 +134,7 @@ $ nova flavor-list
 ```
 We'll use the idp.50 flavor: basically a quad-core, 11GB of memory, 150GB ephemeral disk VM.
 
-=== Setting up Security Groups ===
+### Setting up Security Groups ###
 
 Next, we need to select a security group. This determines what sort of inbound access the VM has:
 ```
@@ -169,7 +169,7 @@ $ nova secgroup-list-rules bootcamp
 As you can see, we're allowing access on ports 22 and 80 (ssh and web) from everywhere.
 
 
-=== Putting it all together, launching the instance ===
+### Putting it all together, launching the instance ###
 To start up the image, we'll use the `$ nova boot` command:
 ```
 usage: nova boot [--flavor <flavor>] [--image <image>] [--meta <key=value>]
@@ -214,7 +214,7 @@ $ nova console-log devoid_bootcamp_vm
 
 You can't SSH into it yet...we need to configure a public IP for that:
 
-=== Adding a floating IP, login to the instance ===
+### Adding a floating IP, login to the instance ###
 
 1. Assign your instance a public IP address:
 ```
@@ -245,7 +245,7 @@ $ nova add-floating-ip devoid_bootcamp 140.221.84.137
 $ ssh ubuntu@140.221.84.137
 ```
 
-=== Mounting an external Volume ===
+### Mounting an external Volume ###
 
 ''Note that this is back on `login.kbase.us`''
 
