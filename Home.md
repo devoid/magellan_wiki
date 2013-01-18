@@ -6,8 +6,8 @@ Basic Wiki text
 * **Do we handle bold?**
 * Do we handle code?
     
-    Simple code block here
-    # Should be normal
+        Simple code block here
+        Should be normal
 
 * Do we handle syntax?
 
