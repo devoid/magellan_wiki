@@ -1,40 +1,28 @@
-### Getting SSH Access to login.kbase.us ###
+### Setup OpenStack Command Line Tools ###
 
-1. On your local machine generate an SSH key pair and upload it to KBase:
-Use the default location and be sure to give a passphrase:
+> You may be able to skip this step if your [[tenant administrator|tenant admin]]
+> has already setup a [[login node]] for you to use.
 
-```
-$ ssh-keygen
-Enter file in which to save the key (/home/devoid/.ssh/id_rsa): 
-Enter passphrase (empty for no passphrase): 
-Your identification has been saved in /home/devoid/.ssh/id_rsa.
-```
+1. Download the command line repositories
 
-2. Read the `id_rsa.pub` file and copy the text
+    If you are on *Ubuntu*, you can install these using `apt-get`.
 
 ```
-$ cat ~/.ssh/id_rsa.pub
+$ apt-get update
+$ apt-get install python-novaclient python-glanceclient
 ```
 
-3. Now go to [[http://accounts.kbase.us]] and login with your KBase username and password.
-Click the "Add New SSH Key" button.
+    For other Unix-like operating systems, try installing
+    with your standard package manager.
 
-4. Paste your key contents into the "Value" field, give it any name.
+    If you are using OS X or your package manager does not
+    have pre-configured packages for the clients, clone the
+    repositories from the source:
 
-5. Click the "Assign credentials to account username" button and check the checkbox. Click "Ok".
-
-6. ''Optional'' Copy your public and private SSH keys to login.kbase.us:
+```bash
+git clone git://github.com/openstack/python-novaclient
+git clone git://github.com/openstack/python-glanceclient
 ```
-scp ~/.ssh/id_rsa.pub devoid@login.kbase.us:~/.ssh/id_rsa.pub
-scp ~/.ssh/id_rsa devoid@login.kbase.us:~/.ssh/id_rsa
-```
-
-### Logging into login.kbase.us ###
-
-```
-ssh devoid@login.kbase.us
-```
-
 
 ### Configuring your environment to work with Magellan ###
 
@@ -250,6 +238,7 @@ $ ssh ubuntu@140.221.84.137
 ''Note that this is back on `login.kbase.us`''
 
 1. Create a 100Gb volume with the name "devoid-volume":
+
 ```
 $ nova volume-create --display-name devoid_volume 100
 $ nova volume-list
@@ -278,7 +267,7 @@ $ sudo -i
 root@caliban:~# lsblk 
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 vda    253:0    0    10G  0 disk 
-└─vda1 253:1    0    10G  0 part /
+vda1 253:1    0    10G  0 part /
 vdb    253:16   0   300G  0 disk /mnt
 vdc    253:32   0   100G  0 disk 
 ```
