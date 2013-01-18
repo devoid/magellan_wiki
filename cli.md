@@ -159,6 +159,7 @@ As you can see, we're allowing access on ports 22 and 80 (ssh and web) from ever
 
 ### Putting it all together, launching the instance ###
 To start up the image, we'll use the `$ nova boot` command:
+
 ```
 usage: nova boot [--flavor <flavor>] [--image <image>] [--meta <key=value>]
                  [--file <dst-path=src-path>] [--key-name <key-name>]
