@@ -1,4 +1,4 @@
-[[__TOC__]]
+[[_TOC_]]
 ### Setup OpenStack Command Line Tools ###
 
 > You may be able to skip this step if your [[tenant administrator|tenant admin]]
