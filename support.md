@@ -1,15 +1,16 @@
 Support
 =======
 
-To help us quickly triage your issue, please follow the following steps:
+To help us quickly triage your issue, please follow these steps:
 
-{{{{{{ blue-modern
-  alice->bob: Test
-  bob->alice: Test response
-}}}}}}
+### Issues with a running instance
 
-1. Is your issue listed in our [[Known Problems]]?
+#### Does it respond to pings?
+
+
+#### Is your issue listed in our [[Known Problems]]?
 
 If your issue is already listed, there is no need to contact us--we are
-working on a solution!
+already working on a solution!
+
 
