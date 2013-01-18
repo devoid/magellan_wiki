@@ -173,7 +173,7 @@ usage: nova boot [--flavor <flavor>] [--image <image>] [--meta <key=value>]
                  <name>
 error: too few arguments
 Try 'nova help boot' for more information.
- ```
+```
 
 Ok, so we need to supply these four arguments:
 `--flavor idp.25`,
