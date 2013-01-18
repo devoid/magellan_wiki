@@ -1,1 +1,5 @@
-# About Magellan
+About Magellan
+==============
+
+[[hardware_diagram.png]]
+
