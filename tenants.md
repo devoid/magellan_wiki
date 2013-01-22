@@ -8,7 +8,7 @@ of multiple tenants.
 This is a list of Magellan Tenants with a contact email for that tenant's
 sysadmin.
 
-<table class=".table">
+<table class="table">
   <thead>
   <tr>
     <th>Tenant Name</th>
