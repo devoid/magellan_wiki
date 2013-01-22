@@ -1,7 +1,7 @@
 [[_TOC_]]
 ### Setup OpenStack Command Line Tools ###
 
-> You may be able to skip this step if your [[tenant administrator|tenant admin]]
+> You may be able to skip this step if your [[tenant administrator|tenants]]
 > has already setup a [[login node]] for you to use.
 
 1. Download the command line repositories
