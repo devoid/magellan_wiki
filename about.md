@@ -1,5 +1,5 @@
 About Magellan
 ==============
 
-[[../img/hardware_diagram.png]]
+[[hardware_diagram.png]]
 
