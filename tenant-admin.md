@@ -1,23 +1,37 @@
-# Magellan Tenant Administrators
+# Magellan Tenants
 
-> **Users**: If [[your issue is not with Magellan itself|support]], cotact
-> the aproprate sysadmin for the tenant you are working in.
+In OpenStack, a *tenant* is the basic group under which all basic
+resources (instances, volumes, IP addresses, etc.) are collectively owned.
+Tenants have usage quotas, owners and members. A user may be a member
+of multiple tenants.
 
-> **Sysadmins**: Send us a good contact email (e.g. an RT Queue) and we'll update this list.
+This is a list of Magellan Tenants with a contact email for that tenant's
+sysadmin.
 
 <table>
+  <thead>
   <th>
     <td>Tenant Name</td>
     <td>Contact Email</td>
   </th>
+  </thead>
+  <tbody>
   <tr>
     <td>KBase</td>
+    <td>support [at] kbase.us</td>
+  </tr>
+  <tr>
+    <td>KBase-Dev</td>
     <td>support [at] kbase.us</td>
   </tr>
   <tr>
     <td>MG-RAST</td>
     <td>support [at] metagenomics.anl.gov</td>
   </tr>
+  <tr>
+    <td>MG-RAST-Dev</td>
+    <td>support [at] metagenomics.anl.gov</td>
+  </tr>
+  </tbody>
 </table>
-
 
